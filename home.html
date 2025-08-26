@@ -26,7 +26,7 @@
         <div class="flex">
             <img src="./assets/Group.png" alt="">
             <div class="pt-3">
-                <h2 class="font-bold">$<span>45000</span></h2>
+                <h2 class="font-bold">$<span id="Available-balance">45000</span></h2>
                 <p class="text-[#08080880]">Available balance</p>
             </div>
         </div>
@@ -76,18 +76,18 @@
         </div>
     </section>
 
-    <section class="all-form-section max-w-lg mx-auto bg-[#f4f5f7] flex flex-col justify-center mx-w-[402px] mb-2">
+    <section class="all-form-section max-w-lg mx-auto bg-[#f4f5f7] flex flex-col justify-center mx-w-[402px] mb-20">
         <!-- add money -->
         <div class="font-[600] text-[18px] mt-4 mb-4">
             <h1>add money</h1>
         </div>
 
-        <form class=" bg-white rounded-2xl p-8   h-[320px]  ">
+        <form class=" bg-white rounded-2xl p-8 h-[320px]  ">
             <div>
                 <h1 class="font-semibold" for=""> Select A Bank </h1><br>
                 <!-- <input type="text" placeholder="Select back" id="mobile-number"
                     class="input bg-[#f4f5f7] mt-3 rounded-3xl" /> -->
-                    <select name="" id="" class="select mt-3 rounded-3xl bg-[#f4f5f7 w-full">
+                    <select name="" id="bank" class="select mt-3 rounded-3xl bg-[#f4f5f7 w-full">
                         <option>Pick a bank</option>
                         <option>AB Bank</option>
                         <option>Duch Bangla</option>
@@ -97,27 +97,29 @@
 
             <div class="my-5">
                 <label class="font-semibold" for=""> Bank Account Number </label><br>
-                <input type="text" placeholder="Enter 11 digit account number" id="pin-number"
+                <input  type="text" placeholder="Enter 11 digit account number" id="Account-number"
                     class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
             </div>
 
             <div>
                 <label class="font-semibold" for=""> Amount to Add </label><br>
-                <input type="text" placeholder="Add Amount to withdraw" id="mobile-number"
+                <input type="text" placeholder="Add Amount to withdraw" id="add-amount"
                     class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
             </div>
 
             <div class="my-5">
                 <label class="font-semibold" for=""> Pin Number</label><br>
-                <input type="text" placeholder="Enter 4 digit pin number" id="pin-number"
+                <input type="text" placeholder="Enter 4 digit pin number" id="add-pin"
                     class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
             </div>
 
 
-            <button id="loginBtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl bg-[#0874F2]">Add Money</button>
+            <button id="add-money-btn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl bg-[#0874F2]">Add Money</button>
 
         </form>
-    </section>
+    </section><br><br><br><br>
+
+    <script src="./js/home.js"></script>
 </body>
 
 </html>
