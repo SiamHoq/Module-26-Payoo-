@@ -27,3 +27,6 @@ document.getElementById('add-money-btn').addEventListener('click', function(e){
 
     document.getElementById('Available-balance').innerText = totalAvailableBalance;
 })
+
+
+console.log('dsk vbh')
