@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <title>Toggoling</title>
+</head>
+
+<body>
+    <button id="batton-1">Button-1</button>
+    <button id="batton-2">Button-2</button>
+
+<!-- 
+    <button>button 1</button>
+    <button>button 2</button> -->
+
+    <h1 id="heading-1">Sceptail is grass(🍃) type </h1>
+    <h1 id="heading-2">Charizard is fire(🔥 ) type </h1>
+
+    <script>
+                document.getElementById('batton-1').addEventListener('click', function () {
+            document.getElementById('heading-2').style.display = 'none'
+
+            document.getElementById('heading-1').style.display = 'block'
+        })
+
+        document.getElementById('batton-2').addEventListener('click', function () {
+            document.getElementById('heading-1').style.display = 'none'
+
+            document.getElementById('heading-2').style.display = 'block'
+        })
+
+    </script>
+
+
+</body>
+
+</html>

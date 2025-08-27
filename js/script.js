@@ -17,7 +17,7 @@ document.getElementById('loginBtn').addEventListener('click',function(e){
 
     if(mobileNumValueConverted === mobileNumber && pinNumValueConverted === pinNumber){
         // console.log('all value matched')
-        window.location.href = "./main.html"
+        window.location.href = "./home.html"
     }
     else{
         alert('invalid')
