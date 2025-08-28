@@ -131,8 +131,8 @@ document.getElementById('transaction-button').addEventListener('click',function(
 
  for(const data of transactionData){
     const div = document.createElement("div");
-    div.innerHTML = 
-
+    div.innerHTML = `
+    
                     <div class=" bg-white rounded-xl p-3 flex justify-between items-center">
                     <div class="flex items-center">
                         <div class=" p-3 rounded-full bg-[#f4f5f7]">
@@ -146,8 +146,13 @@ document.getElementById('transaction-button').addEventListener('click',function(
 
                     <i class="fa-solid fa-ellipsis rotate-90"></i>
                 </div>
+                
+                `
+                transactionContainer.appendChild(div)
     
  }
+
+//  transactionContainer.appendChild(div)
 })
 
 
