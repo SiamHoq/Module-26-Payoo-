@@ -127,7 +127,8 @@ document.getElementById('Withdraw-money-btn').addEventListener('click', function
 })
 
 document.getElementById('transaction-button').addEventListener('click',function(){
- const transactionContainer = document.getElementById('transaction-button');
+ const transactionContainer = document.getElementById('transaction-container');
+//  transactionContainer.innerText = ""
 
  for(const data of transactionData){
     const div = document.createElement("div");
@@ -139,7 +140,7 @@ document.getElementById('transaction-button').addEventListener('click',function(
                             <img src="./assets/wallet1.png" class="mx-auto" alt="">
                         </div>
                         <div class="ml-3">
-                            <h1>${data.name}</h1>
+                            <h1>${data.Name}</h1>
                             <p>${data.Date}</p>
                         </div>
                     </div>
