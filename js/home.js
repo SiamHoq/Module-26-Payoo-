@@ -1,4 +1,5 @@
 const validPin = 1234;
+const transactionData = [];
 
 //Function to get input values
 
@@ -62,7 +63,7 @@ function handleToggleButton(id){
     document.getElementById(id).classList.remove('border-gray-300')
     document.getElementById(id).classList.add('border-[#0874f2]', 'bg-[#0874f20d]')
 
-})
+}
 
 
 
@@ -92,6 +93,14 @@ document.getElementById('add-money-btn').addEventListener('click', function (e) 
 
     setInnerText(totalAvailableBalance);
 
+    const data = {
+        Name : 'Add Money',
+        Date : new Date().toLocaleTimeString() 
+    }
+
+    transactionData.push(data);
+    console.log(transactionData);
+
 })
 
 //Cash out 
@@ -108,6 +117,37 @@ document.getElementById('Withdraw-money-btn').addEventListener('click', function
 
     setInnerText(totalAvailableBalance);
 
+    const data = {
+        Name : 'Cash Out',
+        Date : new Date().toLocaleTimeString() 
+    }
+    transactionData.push(data);
+    console.log(transactionData)
+
+})
+
+document.getElementById('transaction-button').addEventListener('click',function(){
+ const transactionContainer = document.getElementById('transaction-button');
+
+ for(const data of transactionData){
+    const div = document.createElement("div");
+    div.innerHTML = 
+
+                    <div class=" bg-white rounded-xl p-3 flex justify-between items-center">
+                    <div class="flex items-center">
+                        <div class=" p-3 rounded-full bg-[#f4f5f7]">
+                            <img src="./assets/wallet1.png" class="mx-auto" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <h1>${data.name}</h1>
+                            <p>${data.Date}</p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-ellipsis rotate-90"></i>
+                </div>
+    
+ }
 })
 
 
