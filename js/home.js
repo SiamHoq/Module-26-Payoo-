@@ -20,6 +20,7 @@ function getInputValue(id) {
 }
 
 // function to get innerText
+
 function getInnerText(id) {
     const element = document.getElementById(id);
     const elementValue = element.innerText;
@@ -73,6 +74,12 @@ document.getElementById('add-money-btn').addEventListener('click', function (e) 
     const bank = document.getElementById('bank').value
     const accountNumber = getInputValueNumber('Account-number')
     const amount = getInputValueNumber('add-amount')
+
+    if(amount<=0){
+        alert('Invalid amount');
+        return;
+    }
+
     const pin = getInputValueNumber('add-pin')
     // console.log( bank,accountNumber,amount,pin)
 
@@ -112,6 +119,11 @@ document.getElementById('Withdraw-money-btn').addEventListener('click', function
 
     const availableBalance = getInnerText('Available-balance')
 
+    if(amount <=0 || amount > availableBalance){
+        alert('invalid');
+        return;
+    }
+
     const totalAvailableBalance = availableBalance - amount;
     // console.log(totalAvailableBalance)
 
@@ -128,13 +140,13 @@ document.getElementById('Withdraw-money-btn').addEventListener('click', function
 
 document.getElementById('transaction-button').addEventListener('click',function(){
  const transactionContainer = document.getElementById('transaction-container');
-//  transactionContainer.innerText = ""
+ transactionContainer.innerText = ""
 
  for(const data of transactionData){
     const div = document.createElement("div");
     div.innerHTML = `
     
-                    <div class=" bg-white rounded-xl p-3 flex justify-between items-center">
+                    <div class=" bg-white rounded-xl p-3 flex justify-between items-center mt-3">
                     <div class="flex items-center">
                         <div class=" p-3 rounded-full bg-[#f4f5f7]">
                             <img src="./assets/wallet1.png" class="mx-auto" alt="">
